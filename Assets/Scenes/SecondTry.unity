@@ -6701,6 +6701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberText: {fileID: 1487934071}
+  controller: {fileID: 1314569365}
 --- !u!1001 &921954672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8693,6 +8694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answareInput: {fileID: 513178926}
+  boxes: {fileID: 883404495}
+  result: -1
 --- !u!4 &1314569366
 Transform:
   m_ObjectHideFlags: 0

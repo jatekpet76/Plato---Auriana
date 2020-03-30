@@ -8,6 +8,7 @@ public class AppleBoxesController : MonoBehaviour
     AppleBoxController[] _boxes;
 
     public TextMeshProUGUI numberText;
+    public GameController controller;
 
     int _baseNumber = 6;
     int _times = 7;
@@ -20,12 +21,14 @@ public class AppleBoxesController : MonoBehaviour
         SetQuestion();
     }
 
-    void SetQuestion()
+    public void SetQuestion()
     {
         _baseNumber = Random.Range(1, 10);
         _times = Random.Range(1, 10);
 
         numberText.SetText(_baseNumber.ToString() + " * " + _times.ToString() +" = ");
+
+        controller.result = _baseNumber * _times;
 
         foreach (AppleBoxController box in _boxes)
         {

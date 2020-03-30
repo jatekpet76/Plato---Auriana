@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,6 +7,10 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public TMP_InputField answareInput;
+
+    public AppleBoxesController boxes;
+
+    public int result = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +33,27 @@ public class GameController : MonoBehaviour
         SetNumber(KeyCode.Alpha8, "8");
         SetNumber(KeyCode.Alpha9, "9");
 
+        if (Input.GetKey(KeyCode.Backspace) || Input.GetKey(KeyCode.Delete))
+        {
+            answareInput.text = "";
+        }
+
+        
+        var resultNumber = Int32.Parse(answareInput.text);
+
+        if (result == resultNumber)
+        {
+            answareInput.text = "";
+
+            boxes.SetQuestion();
+        }
     }
 
     void SetNumber(KeyCode key, string text)
     {
-        if (Input.GetKey(key))
+        if (Input.GetKeyDown(key))
         {
-            answareInput.text = text;
+            answareInput.text += text;
         }
 
     }
