@@ -38,8 +38,15 @@ public class GameController : MonoBehaviour
             answareInput.text = "";
         }
 
-        
-        var resultNumber = Int32.Parse(answareInput.text);
+        var resultNumber = 0;
+
+        try
+        {
+            resultNumber = Int32.Parse(answareInput.text);
+        } catch (Exception exc)
+        {
+            // Debug.LogError(exc);
+        }
 
         if (result == resultNumber)
         {
