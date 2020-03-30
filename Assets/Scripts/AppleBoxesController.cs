@@ -14,6 +14,7 @@ public class AppleBoxesController : MonoBehaviour
     int _times = 7;
 
 
+
     void Start()
     {
         _boxes = GetComponentsInChildren<AppleBoxController>();
@@ -26,9 +27,20 @@ public class AppleBoxesController : MonoBehaviour
         _baseNumber = Random.Range(1, 10);
         _times = Random.Range(1, 10);
 
-        numberText.SetText(_baseNumber.ToString() + " * " + _times.ToString() +" = ");
+        Operators operatorType = (Random.Range(0, 10) % 2 == 0)? Operators.TIMES: Operators.DIVIDE;
 
-        controller.result = _baseNumber * _times;
+        if (operatorType == Operators.DIVIDE)
+        {
+            numberText.SetText((_times * _baseNumber).ToString() + " / " + _baseNumber.ToString() + " = ");
+
+            controller.result = _times;
+        }
+        else
+        {
+            numberText.SetText(_times.ToString() + " * " + _baseNumber.ToString() + " = ");
+
+            controller.result = _baseNumber * _times;
+        }
 
         foreach (AppleBoxController box in _boxes)
         {
@@ -48,4 +60,9 @@ public class AppleBoxesController : MonoBehaviour
     {
         
     }
+}
+
+enum Operators
+{
+    TIMES, DIVIDE
 }

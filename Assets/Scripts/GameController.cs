@@ -9,8 +9,11 @@ public class GameController : MonoBehaviour
     public TMP_InputField answareInput;
     public AppleBoxesController boxes;
     public FireWorkController fireWork;
+    public SheepsController sheeps;
+    public SheepsController animals;
 
     public int result = -1;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +51,11 @@ public class GameController : MonoBehaviour
             // Debug.LogError(exc);
         }
 
+        SetState(resultNumber);
+    }
+
+    void SetState(int resultNumber)
+    {
         if (result == resultNumber)
         {
             fireWork.Invoke();
@@ -55,6 +63,13 @@ public class GameController : MonoBehaviour
             answareInput.text = "";
 
             boxes.SetQuestion();
+
+            score++;
+
+            int tens = Mathf.FloorToInt(score / 10);
+
+            animals.SetSheepCount(tens);
+            sheeps.SetSheepCount(score - (tens * 10));
         }
     }
 
