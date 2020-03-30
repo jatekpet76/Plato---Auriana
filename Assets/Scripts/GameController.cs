@@ -1,0 +1,42 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class GameController : MonoBehaviour
+{
+    public TMP_InputField answareInput;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        SetNumber(KeyCode.Alpha0, "0");
+        SetNumber(KeyCode.Alpha1, "1");
+        SetNumber(KeyCode.Alpha2, "2");
+        SetNumber(KeyCode.Alpha3, "3");
+        SetNumber(KeyCode.Alpha4, "4");
+        SetNumber(KeyCode.Alpha5, "5");
+        SetNumber(KeyCode.Alpha6, "6");
+        SetNumber(KeyCode.Alpha7, "7");
+        SetNumber(KeyCode.Alpha8, "8");
+        SetNumber(KeyCode.Alpha9, "9");
+
+    }
+
+    void SetNumber(KeyCode key, string text)
+    {
+        if (Input.GetKey(key))
+        {
+            answareInput.text = text;
+        }
+
+    }
+
+}
