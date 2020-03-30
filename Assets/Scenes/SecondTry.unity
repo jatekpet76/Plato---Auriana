@@ -373,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 1362569564764874085, guid: 2577f9fd06b020441bf8d237f547b238,
         type: 3}
       propertyPath: number
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1449258062831773120, guid: 2577f9fd06b020441bf8d237f547b238,
         type: 3}
@@ -9413,7 +9413,7 @@ GameObject:
   - component: {fileID: 1314569365}
   m_Layer: 0
   m_Name: GameHandler
-  m_TagString: Untagged
+  m_TagString: GameHandler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10706,8 +10706,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 56 + 67 =
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16657,17 +16657,17 @@ PrefabInstance:
     - target: {fileID: 7525044965645179008, guid: e7a8a953dbfd2e64f84aa7df609b420f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.94
+      value: 5.97
       objectReference: {fileID: 0}
     - target: {fileID: 7525044965645179008, guid: e7a8a953dbfd2e64f84aa7df609b420f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.37
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: 7525044965645179008, guid: e7a8a953dbfd2e64f84aa7df609b420f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.46
+      value: -14.37
       objectReference: {fileID: 0}
     - target: {fileID: 7525044965645179008, guid: e7a8a953dbfd2e64f84aa7df609b420f,
         type: 3}

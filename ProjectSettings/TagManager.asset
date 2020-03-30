@@ -8,6 +8,7 @@ TagManager:
   - AppleBox
   - ChooseNumber
   - Sheep
+  - GameHandler
   layers:
   - Default
   - TransparentFX

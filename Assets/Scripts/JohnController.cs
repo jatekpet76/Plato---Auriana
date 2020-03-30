@@ -8,6 +8,7 @@ public class JohnController : MonoBehaviour
     NavMeshAgent _agent;
     Camera _camera;
     Animator _animator;
+    GameController _gameController;
 
     bool _hasTarget = false;
 
@@ -20,6 +21,7 @@ public class JohnController : MonoBehaviour
         _camera = Camera.main;
         _cameraOffset = Camera.main.transform.position - transform.position;
         _animator = GetComponentInChildren<Animator>();
+        _gameController = GameObject.FindGameObjectWithTag("GameHandler").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,13 @@ public class JohnController : MonoBehaviour
             {
                 _agent.destination = hit.point;
                 _hasTarget = true;
+
+                var numberController = hit.collider.gameObject.GetComponent<ChooseNumberController>();
+
+                if (numberController != null)
+                {
+                    _gameController.AddNumber(numberController.number);
+                }
             }
         } 
         else if (_hasTarget)

@@ -54,6 +54,11 @@ public class GameController : MonoBehaviour
         SetState(resultNumber);
     }
 
+    public void AddNumber(int number)
+    {
+        answareInput.text += number.ToString();
+    }
+
     void SetState(int resultNumber)
     {
         if (result == resultNumber)
