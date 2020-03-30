@@ -7,8 +7,8 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
     public TMP_InputField answareInput;
-
     public AppleBoxesController boxes;
+    public FireWorkController fireWork;
 
     public int result = -1;
 
@@ -50,6 +50,8 @@ public class GameController : MonoBehaviour
 
         if (result == resultNumber)
         {
+            fireWork.Invoke();
+
             answareInput.text = "";
 
             boxes.SetQuestion();
