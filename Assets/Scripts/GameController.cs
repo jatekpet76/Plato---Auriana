@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Backspace) || Input.GetKey(KeyCode.Delete))
         {
-            answareInput.text = "";
+            ClearInput();
         }
 
         var resultNumber = 0;
@@ -57,6 +57,11 @@ public class GameController : MonoBehaviour
     public void AddNumber(int number)
     {
         answareInput.text += number.ToString();
+    }
+
+    public void ClearInput()
+    {
+        answareInput.text = "";
     }
 
     void SetState(int resultNumber)
